@@ -1,0 +1,13 @@
+function cosLaw (a,b, angleC) {
+    return Math.sqrt(a ** 2 + b ** 2 - 2*a*b*Math.cos(angleC * (Math.PI / 180)))
+
+}
+
+document.getElementById("calculateCosine").addEventListener("click",() =>{
+    const a = Number(document.getElementById("sideA").value);
+    const b = Number(document.getElementById("sideB").value);
+    const angleC = Number(document.getElementById("angleC").value);
+    const result = cosLaw(a,b,angleC);
+    document.getElementById("cosineResult").textContent = result
+
+})
