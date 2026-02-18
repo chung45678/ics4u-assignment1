@@ -11,3 +11,13 @@ document.getElementById("calculateCosine").addEventListener("click",() =>{
     document.getElementById("cosineResult").textContent = result
 
 })
+
+function findAsymptote(m,n) {
+    if (m === n) return "The asymptote is horizontal";
+    if (n > m) return "The asymptote is the x-axis";
+    
+    const degreeDifference = m - n;
+    const names = ["Linear", "Quadratic", "Cubic", "Quartic","Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic"];
+    return names[degreeDifference - 1] || "Higher-degree asymptote";
+
+}
