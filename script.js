@@ -21,3 +21,17 @@ function findAsymptote(m,n) {
     return names[degreeDifference - 1] || "Higher-degree asymptote";
 
 }
+
+function findLeibniz(n) {
+    let a = 0
+    for (let i = 0; i < n; i++) {
+        a += ((i % 2 === 0 ? 1: -1) / (2 *i + 1));
+    }
+    return (a * 4)
+}
+
+document.getElementById("approximatePi").addEventListener("click", () => {
+    const n = parseInt(document.getElementById("iterations").value);
+    const result = findLeibniz(n);
+    document.getElementById("piResult").textContent = result
+})
