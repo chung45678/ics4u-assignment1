@@ -22,6 +22,11 @@ section {
     
 }
 
+label {
+    text-align: center;
+    display: block;
+    margin: 10px 0px;
+}
 
 button {
     background-color: rgb(10, 126, 204);
